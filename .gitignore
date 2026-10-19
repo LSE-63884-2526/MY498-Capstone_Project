@@ -8,8 +8,7 @@
 # lemmatizer
 /zemberek
 
-# stopwords
-/stopwords_tr.txt
+.DS_Store
 
 #
 /notebooks/ppmi_dislocation.ipynb
