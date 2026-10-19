@@ -510,7 +510,6 @@ zira
 şuracıkta
 şurası
 şöyle
-# --- eklendi 2026-08-12: soru ekleri, ek parcalari, editor kirpintilari, hitap kaliplari ---
 arkadaşlarım
 arkadaşlarıma
 aşkına
