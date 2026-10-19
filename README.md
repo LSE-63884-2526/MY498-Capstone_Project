@@ -1,6 +1,6 @@
 This repository contains the scripts, notebooks, and visuals for the capstone project titled “Opposition Discourse under a Competitive Authoritarian Regime: Computational Discourse Analysis of the Republican People’s Party (2015-2026)”. The thesis was submitted in partial fulfilment of the requirements for the degree of MSc in Applied Social Data Science, Department of Methodology, London School of Economics and Political Science.
 
-For Turkish scholars, embedding vectors and metadata required to reproduce the analysis are available here: [huggingface.co/datasets/athena753/CHP2015_2026](https://huggingface.co/datasets/athena753/CHP2015_2026)
+For Turkish researchers, embedding vectors and metadata required to reproduce the analysis are available here: [huggingface.co/datasets/athena753/CHP2015_2026](https://huggingface.co/datasets/athena753/CHP2015_2026)
 
 ```
 capstone/
