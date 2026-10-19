@@ -18,6 +18,8 @@ Deliberately NOT in this file (separate concerns):
     - KWIC over raw text                                         -> PreprocessingPipeline
 """
 
+# initialize
+
 import os
 import re
 from collections import defaultdict
@@ -424,7 +426,7 @@ class SignifierAnalyzer:
 
 
     # ----------------------------------------------------------------
-    # UMAP PLOT
+    # METACLUSTER HELPERS
     # ----------------------------------------------------------------
 
     def set_cluster_names(self, mapping):
