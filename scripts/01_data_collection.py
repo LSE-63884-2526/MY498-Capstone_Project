@@ -5,8 +5,9 @@ import time
 from datetime import datetime
 from pathlib import Path
 
-DATA_DIR = Path(__file__).resolve().parent.parent / "Data"
-DATA_DIR.mkdir(exist_ok=True)
+HERE = Path(__file__).resolve().parent
+ROOT = HERE.parent
+DATA = ROOT / "Data"
 
 HEADERS = {
     'User-Agent': 'For academic research purposes (LSE MSc Thesis - CHP Discourse Analysis (November 2023 - Present); contact: e.avci@lse.ac.uk)'
@@ -42,7 +43,7 @@ def detect_speaker(title):
     elif 'özgür özel' in title_lower:
         return 'ozel'
     else:
-        return 'unknown'
+        return 'unknown' # freq = 0
 
 
 def get_speech_metadata(category_path):
@@ -151,13 +152,14 @@ def collect_corpus(categories, label):
     df = pd.DataFrame(speeches)
 
     # use utf-8-sig for turkish language
-    df.to_csv(DATA_DIR / f'corpus_{label}.csv', index=False, encoding='utf-8-sig')
+    DATA.mkdir(parents=True, exist_ok=True)
+    df.to_csv(DATA / f'corpus_{label}.csv', index=False, encoding='utf-8-sig')
     print(f"Saved: corpus_{label}.csv ({df.shape[0]} rows)")
-    
+
     # recover failed_urls
     if failed_urls:
         df_failed = pd.DataFrame(failed_urls)
-        df_failed.to_csv(DATA_DIR / f'failed_{label}.csv', index=False, encoding='utf-8-sig')
+        df_failed.to_csv(DATA / f'failed_{label}.csv', index=False, encoding='utf-8-sig')
         print(f"Failed URLs saved: failed_{label}.csv ({len(failed_urls)} rows)")
     return df
 
