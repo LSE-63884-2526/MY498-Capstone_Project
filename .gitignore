@@ -1,0 +1,14 @@
+# csv files
+/data
+
+# embedding vectors 
+/embeddings
+
+# lemmatizer
+/zemberek
+
+# stopwords
+/stopwords_tr.txt
+
+#
+/notebooks/ppmi_dislocation.ipynb
